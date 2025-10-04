@@ -129,7 +129,28 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Pistol
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.46428573, y: -1.0555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 30
+      width: 28
+      height: 18
+    spriteID: 5caede3cf23f3b94386b86fa6f579a9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 30}
+  - name: Frame_1
+    originalName: 
+    pivot: {x: 0.4827586, y: -1.0555556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +158,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 32
-      height: 32
-    spriteID: 5caede3cf23f3b94386b86fa6f579a9b
+      width: 29
+      height: 18
+    spriteID: 13a092486a712404ba0c99133d82cabc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -163,15 +184,24 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Pistol
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 19
+        y: 19
+        width: 28
+        height: 18
       spriteId: 5caede3cf23f3b94386b86fa6f579a9b
+    - name: Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 19
+        width: 29
+        height: 18
+      spriteId: 13a092486a712404ba0c99133d82cabc
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +211,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}
   previousTextureSize: {x: 64, y: 64}
