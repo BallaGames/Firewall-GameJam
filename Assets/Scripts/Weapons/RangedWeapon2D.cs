@@ -4,7 +4,7 @@ using Balla;
 using UnityEngine.VFX;
 
 
-public class RangedWeapon : BallaScript
+public class RangedWeapon2D : BallaScript
 {
     public ProjectileData projectileData;
 

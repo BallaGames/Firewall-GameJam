@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using Balla.Utils;
 using JetBrains.Annotations;
 
-public class PlayerController : BallaScript
+public class PlayerController2D : BallaScript
 {
     public bool usingGamepad;
     public Vector3 aimTarget;

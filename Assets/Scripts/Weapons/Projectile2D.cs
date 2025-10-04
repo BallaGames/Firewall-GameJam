@@ -3,9 +3,9 @@ using Balla.Core;
 using Balla;
 using System.Collections;
 
-public class Projectile : BallaScript
+public class Projectile2D : BallaScript
 {
-
+    //recompile
     public ProjectileData data;
 
     public SpriteRenderer r;
@@ -24,7 +24,7 @@ public class Projectile : BallaScript
 
     protected float radius;
 
-    public void Initialise(RangedWeapon weapon)
+    public void Initialise(RangedWeapon2D weapon)
     {
         data = weapon.projectileData;
         direction = Quaternion.Euler(0, 0, Random.Range(-data.deviation, data.deviation)) * weapon.muzzle.right;

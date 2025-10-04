@@ -6,7 +6,7 @@ public class WeaponController : BallaScript
 {
     [SerializeField, ReadOnly] protected bool fireInput;
 
-    public RangedWeapon weapon;
+    public RangedWeapon2D weapon;
 
     [SerializeField] protected Entity entity;
 
