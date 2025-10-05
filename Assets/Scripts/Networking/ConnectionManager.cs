@@ -28,8 +28,6 @@ public class ConnectionManager : MonoBehaviour
     public static string lobbyCode;
     public static string relayCode;
 
-    public SceneReference gameScene;
-
     public static string playerName = "FunnyPlayerName";
 
     public NetworkObject sessionManagerPrefab;
@@ -56,6 +54,11 @@ public class ConnectionManager : MonoBehaviour
 
     }
 
+    public void Disconnect()
+    {
+        NetworkManager.Singleton.Shutdown();
+    }
+
     private void Singleton_OnClientStopped(bool obj)
     {
         //If our client is stopped and we're NOT on the menu scene, we should try to go back to it.
@@ -63,6 +66,8 @@ public class ConnectionManager : MonoBehaviour
         {
             SceneManager.LoadScene(menuScene.BuildIndex);
         }
+        LobbyService.Instance.RemovePlayerAsync(currentLobby.Id, AuthenticationService.Instance.PlayerId);
+        currentLobby = null;
     }
 
     private void Singleton_OnClientStarted()

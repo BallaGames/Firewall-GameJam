@@ -123,9 +123,6 @@ MonoBehaviour:
     asset: {fileID: 102900000, guid: e76d4e65c9421e74fa2e442ad74e57dc, type: 3}
     guid: e76d4e65c9421e74fa2e442ad74e57dc
   isHost: 0
-  gameScene:
-    asset: {fileID: 102900000, guid: 4a4072179055723479f06aa12e50c8e8, type: 3}
-    guid: 4a4072179055723479f06aa12e50c8e8
   sessionManagerPrefab: {fileID: 3366579294861149140, guid: 5614bc2d6ed7fc543bb7c21e4a6ea333, type: 3}
 --- !u!114 &8701459761799290916
 MonoBehaviour:

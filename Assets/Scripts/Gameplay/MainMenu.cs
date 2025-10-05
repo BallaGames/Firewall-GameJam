@@ -16,12 +16,18 @@ public class MainMenu : MonoBehaviour
 
     private void Singleton_OnClientStopped(bool obj)
     {
-        mainUI.SetGroupActive(true);
+        if(mainUI != null)
+        {
+            mainUI.SetGroupActive(true);
+        }
     }
 
     private void Singleton_OnClientStarted()
     {
-        mainUI.SetGroupActive(false);
+        if (mainUI != null)
+        {
+            mainUI.SetGroupActive(false);
+        }
     }
 
     public void GameQuit()
