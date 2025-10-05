@@ -9,6 +9,7 @@ using Unity.Services.Lobbies.Models;
 using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ConnectionManager : MonoBehaviour
 {
@@ -50,7 +51,25 @@ public class ConnectionManager : MonoBehaviour
     private void Start()
     {
         GetTransport();
+        NetworkManager.Singleton.OnClientStarted += Singleton_OnClientStarted;
+        NetworkManager.Singleton.OnClientStopped += Singleton_OnClientStopped;
+
     }
+
+    private void Singleton_OnClientStopped(bool obj)
+    {
+        //If our client is stopped and we're NOT on the menu scene, we should try to go back to it.
+        if(SceneManager.GetActiveScene().buildIndex != menuScene.BuildIndex)
+        {
+            SceneManager.LoadScene(menuScene.BuildIndex);
+        }
+    }
+
+    private void Singleton_OnClientStarted()
+    {
+
+    }
+
     void GetTransport()
     {
         transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
@@ -80,6 +99,7 @@ public class ConnectionManager : MonoBehaviour
     public async void TryJoinLobby(string lobbyCode)
     {
         currentLobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode);
+        ConnectionManager.lobbyCode = lobbyCode;
         await JoinRelay(currentLobby.Data["relaycode"].Value);
 
     }
